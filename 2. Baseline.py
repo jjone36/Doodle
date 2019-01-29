@@ -13,7 +13,7 @@ batch_size = 500
 model = Sequential()
 
 # ConvNet_1
-model.add(Conv2D(32, kernel_size = 3, input_shape = (im_size, im_size, 1), padding = 'same', activation = 'relu'))
+model.add(Conv2D(32, kernel_size = 3, input_shape = (im_size, im_size, 3), padding = 'same', activation = 'relu'))
 model.add(MaxPool2D(2, strides = 2))
 
 # ConvNet_2

@@ -87,7 +87,7 @@ print("The input shape is {}".format(X_train.shape))
 print("The output shape is {}".format(y_train.shape))
 
 # Reshape X_train
-X_train_2 = X_train.reshape((X_train.shape[0], im_size*im_size, 3))
+X_train_2 = X_train.reshape((X_train.shape[0], im_size*im_size*3))
 
 # Concatenate X_train and y_train
 X_y_train = np.hstack((X_train_2, y_train))
@@ -103,7 +103,7 @@ y_train = X_y_train[cut:, a:]
 
 # Reshape X_train back to (64, 64)
 X_train = X_train.reshape((X_train.shape[0], im_size, im_size, 3))
-X_val = X_val.reshape((X_val.shape[0], im_size, im_size, 1))
+X_val = X_val.reshape((X_val.shape[0], im_size, im_size, 3))
 
 # Check the result
 print("The input shape of train set is {}".format(X_train.shape))

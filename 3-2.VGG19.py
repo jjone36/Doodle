@@ -7,7 +7,7 @@ n_epochs = 5
 batch_size = 500
 
 # VGG19 Application
-model_v = MobileNet(include_top=True, weights='imagenet', input_shape=(im_size, im_size, 3), classes = n_class)
+model_v = MobileNet(include_top = True, weights= None, input_shape=(im_size, im_size, 3), classes = n_class)
 
 model_v.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 model_v.summary()

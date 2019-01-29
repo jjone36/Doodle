@@ -8,7 +8,7 @@
 
 ![img](https://github.com/jjone36/Doodle/blob/master/img.png)
 
-This project is for building an image classifier model that can handle noisy and sometimes incomplete drawings and perform well on classifying 50 different animals. Starting from a simple CNN as a baseline, I used Residual Net and VGG19. I choose these models because they are covered in Andrew Ng's DL specialization course On Coursera. I wanted to have a time to practice what I learnt in class. The final score was ~~ of the accuracy.
+This project is for building an image classifier model that can handle noisy and sometimes incomplete drawings and perform well on classifying 50 different animals. Starting from a simple CNN as a baseline, I used Residual Net and VGG19. I choose these models because they are covered in Andrew Ng's DL specialization course On Coursera. I wanted to have a time to practice what I learnt in class.
 
 <br>
 
@@ -21,7 +21,7 @@ This project is for building an image classifier model that can handle noisy and
 <br>
 
 ## ***2. File Details***
-- **[Doodle.ipynb](https://github.com/jjone36/Doodle/blob/master/Doodle.ipynb)** : Image processing and visualizing the drawings. Building a simple CNN as a baseline.
+- **[Doodle.ipynb](https://www.kaggle.com/jjone36/the-easiest-code-for-catching-doodle)** : Image processing and visualizing the drawings. Building a simple CNN as a baseline on Kaggle
 
 - **[1. Preprocessing.py](https://github.com/jjone36/Doodle/blob/master/1.%20Preprocessing.py)** : 1. data preprocessing
 - **[2. Baseline.py](https://github.com/jjone36/Doodle/blob/master/2.%20Baseline.py)** : 2. Baseline Modeling
