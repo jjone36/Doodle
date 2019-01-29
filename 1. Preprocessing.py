@@ -43,7 +43,7 @@ def draw_to_img(strokes, im_size = im_size):
 
     A = (cv2.resize(A, (im_size, im_size)) / 255.)  # image resizing to uniform format
 
-    return A[:, :, -1]
+    return A[:, :, 3]
 
 
 # Importing all samples
@@ -74,7 +74,7 @@ for a in animals:
 X_train.shape
 
 # Drop the first layer
-X_train = X_train[1:, :, :]
+X_train = X_train[1:, :, :, :]
 X_train.shape
 
 # Encoding
@@ -87,7 +87,7 @@ print("The input shape is {}".format(X_train.shape))
 print("The output shape is {}".format(y_train.shape))
 
 # Reshape X_train
-X_train_2 = X_train.reshape((X_train.shape[0], im_size*im_size))
+X_train_2 = X_train.reshape((X_train.shape[0], im_size*im_size, 3))
 
 # Concatenate X_train and y_train
 X_y_train = np.hstack((X_train_2, y_train))
@@ -102,7 +102,7 @@ X_train = X_y_train[cut:, :a]
 y_train = X_y_train[cut:, a:]
 
 # Reshape X_train back to (64, 64)
-X_train = X_train.reshape((X_train.shape[0], im_size, im_size, 1))
+X_train = X_train.reshape((X_train.shape[0], im_size, im_size, 3))
 X_val = X_val.reshape((X_val.shape[0], im_size, im_size, 1))
 
 # Check the result

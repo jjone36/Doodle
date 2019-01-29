@@ -7,7 +7,7 @@ n_epochs = 5
 batch_size = 500
 
 # ResNet50 Application
-model_r = ResNet50(include_top = True, weights= 'imagenet', input_shape=(im_size, im_size, 1), classes = n_class)
+model_r = ResNet50(include_top = True, weights= 'imagenet', input_shape=(im_size, im_size, 3), classes = n_class)
 
 model_r.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 model_r.summary()
