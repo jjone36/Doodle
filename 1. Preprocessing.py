@@ -9,14 +9,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.set(style='white', context='notebook')
 
 import ast
 import cv2
 import dask.bag as db
 
 np.random.seed(36)
-
 
 # list of animals
 animals = ['ant', 'bat', 'bear', 'bee', 'bird', 'butterfly', 'camel', 'cat', 'cow',
@@ -27,6 +25,12 @@ animals = ['ant', 'bat', 'bear', 'bee', 'bird', 'butterfly', 'camel', 'cat', 'co
            'sea turtle', 'shark', 'sheep', 'snail', 'snake', 'spider', 'squirrel',
            'swan', 'teddy-bear', 'tiger', 'whale', 'zebra']
 
+# Setting
+dir_path = '../input/train_simplified/'
+
+im_size = 64
+n_samples = 1000
+n_class = len(animals)
 
 # define a function converting drawing to image data
 def draw_to_img(strokes, im_size = im_size):
@@ -45,14 +49,7 @@ def draw_to_img(strokes, im_size = im_size):
 
     return A[:, :, 3]
 
-
 # Importing all samples
-dir_path = '../input/train_simplified/'
-
-im_size = 64
-n_samples = 1000
-n_class = len(animals)
-
 X_train = np.zeros((1, im_size, im_size))
 y = []
 
@@ -92,7 +89,7 @@ X_train_2 = X_train.reshape((X_train.shape[0], im_size*im_size*3))
 # Concatenate X_train and y_train
 X_y_train = np.hstack((X_train_2, y_train))
 
-Random shuffle
+# Random shuffle
 np.random.shuffle(X_y_train)
 a = im_size*im_size
 cut = int(len(X_y_train) * .1)

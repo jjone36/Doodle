@@ -3,7 +3,7 @@
 
 from keras.applications.resnet50 import ResNet50
 
-n_epochs = 5
+n_epochs = 10
 batch_size = 500
 
 # ResNet50 Application
