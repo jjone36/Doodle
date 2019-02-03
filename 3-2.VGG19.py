@@ -1,7 +1,7 @@
 
 # This is second step of the entire script: Bench Mark VGG19
 
-from tensorflow.keras.applications.vgg19 import VGG19
+from keras.applications.vgg19 import VGG19
 
 n_epochs = 5
 batch_size = 500
