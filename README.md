@@ -16,8 +16,6 @@ This project is for building an image classifier model that can handle noisy and
 
 * **Applied skills:** Image Processing and visualization. Parallel Computation with Dask. Image Classification with CNN and sequence model.
 
-* **Publication:** *(Coming soon!)*
-
 <br>
 
 ## ***2. File Details***
